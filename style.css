@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Quicksand';
+    src: url('../Assets/Quicksand-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: black;
+}
+
+#header {
+    border-radius: 15px;
+    margin-top: 2%;
+    width: 100%;
+    height: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#headertext {
+    font-size: 40px;
+    font-weight: bold;
+    color: #ffc107;
+}

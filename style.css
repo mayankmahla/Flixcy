@@ -1,27 +1,113 @@
 @font-face {
     font-family: 'Quicksand';
-    src: url('../Assets/Quicksand-Regular.ttf') format('truetype');
+    src: url('../assets/Quicksand-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: 'Quicksand', sans-serif;
-    background-color: black;
+    background-color: black; /* Body background black */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
 #header {
-    border-radius: 15px;
-    margin-top: 2%;
-    width: 100%;
-    height: 5%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    padding: 1%;
+    background-color: black; /* Header background black */
+    border-bottom: 1px solid #555;
 }
 
-#headertext {
+#logo {
+    width: 50px;
+}
+
+#title {
+    flex-grow: 1;
+    text-align: center;
+    color: whitesmoke;
     font-size: 40px;
-    font-weight: bold;
-    color: #ffc107;
+}
+
+#login {
+    padding: 8px 16px;
+    background-color: #ffc107;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Login button hover effect */
+#login:hover {
+    background-color: #e0a800;
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+/* Login button click effect */
+#login:active {
+    transform: scale(0.95); /* Slightly decrease size on click */
+}
+
+#container {
+    display: flex;
+    flex-grow: 1;
+}
+
+#menu {
+    width: 80px;
+    background-color: black; /* Menu background black */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    position: fixed; /* Make menu fixed */
+    height: 100%;    /* Full height */
+}
+
+.menu-item {
+    margin: 20px 0;
+    display: flex;  /* Allow flex properties */
+    justify-content: center; /* Center items horizontally */
+    align-items: center;     /* Center items vertically */
+    cursor: pointer; /* Change cursor to pointer for hand effect */
+    transition: transform 0.2s; /* Animation for transform */
+}
+
+/* Menu item hover effect */
+.menu-item:hover {
+    transform: scale(1.1); /* Increase size on hover */
+}
+
+/* Menu item click effect */
+.menu-item:active {
+    transform: scale(0.95); /* Decrease size on click */
+}
+
+.menu-item img {
+    width: 30px;  /* Set width to 30 pixels */
+    height: 30px; /* Set height to 30 pixels */
+}
+
+#main-content {
+    flex-grow: 1;
+    margin-left: 80px; /* Ensure content is not hidden behind the menu */
+    overflow-y: auto;   /* Make this area scrollable */
+    padding: 20px;
+    background-color: black; /* Main content background black */
+    color: white;
 }
